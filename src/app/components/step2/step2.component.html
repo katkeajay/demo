@@ -1,0 +1,20 @@
+<div class="step2-form" [formGroup]="step2Form">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Hobbies</mat-label>
+        <input matInput placeholder="Playing cricket" formControlName="hobbies">
+      </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Tell me about yourself</mat-label>
+        <textarea matInput placeholder=" i am ..." formControlName="about"></textarea>
+      </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Your Educational Details</mat-label>
+        <textarea matInput placeholder=" Engineering, ...etc" formControlName="higherEdu"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="displayNextStep()" [disabled]="step2Form.invalid">Next</button>
+</div>
